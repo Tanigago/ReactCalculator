@@ -3,7 +3,7 @@ function History(props) {
     return (
         <div>
             <h1>Historial</h1>
-            {props.pHtmlElementsArray.map (item => <p>{item}</p>);}
+            {props.pHtmlElementsArray.map (item => <p>{item}</p>)}
         </div>
     )
 }
