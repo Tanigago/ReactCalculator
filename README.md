@@ -16,11 +16,11 @@ npm start
         <p>{result}</p>
         ```
     - [X] Añade un botón "sumar" que ejecute un handler `addHandler` en el evento `onClick`. `addHandler` ha de realizar las siguientes tareas:
-        - [ ] Poner `result` el resultado en **sumar** los valores de `firstNumber` y `secondNumber`. Comprueba que el resultado se muestra en la página.
-        - [ ] Poner en `firstNumber` el valor almacenado en `result`.
+        - [X] Poner `result` el resultado en **sumar** los valores de `firstNumber` y `secondNumber`. Comprueba que el resultado se muestra en la página.
+        - [X] Poner en `firstNumber` el valor almacenado en `result`.
         - [ ] Eliminar el valor de `secondNumber`.
-    - [ ] Añade nuevos botones con sus correspondientes handlers para las operaciones "restar", "multiplicar" y "dividir" siguiendo procesos equivalentes a los anteriores.
-    - [ ] Añade un nuevo botón "C" con su handler que borre datos mostrados en las entradas de datos y el resultado. Hazlo eliminado el valor de los hooks correspondientes.
+    - [X] Añade nuevos botones con sus correspondientes handlers para las operaciones "restar", "multiplicar" y "dividir" siguiendo procesos equivalentes a los anteriores.
+    - [X] Añade un nuevo botón "C" con su handler que borre datos mostrados en las entradas de datos y el resultado. Hazlo eliminado el valor de los hooks correspondientes.
     - [ ] Añade un botón "M+" que almacene el valor de `result` en un hook "ref". Llama `memory` al ref.
     - [ ] Añade un botón "MR" que copie el valor de `memory` en `secondNumber`.
 
