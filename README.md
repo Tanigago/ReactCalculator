@@ -21,8 +21,8 @@ npm start
         - [ ] Eliminar el valor de `secondNumber`.
     - [X] Añade nuevos botones con sus correspondientes handlers para las operaciones "restar", "multiplicar" y "dividir" siguiendo procesos equivalentes a los anteriores.
     - [X] Añade un nuevo botón "C" con su handler que borre datos mostrados en las entradas de datos y el resultado. Hazlo eliminado el valor de los hooks correspondientes.
-    - [ ] Añade un botón "M+" que almacene el valor de `result` en un hook "ref". Llama `memory` al ref.
-    - [ ] Añade un botón "MR" que copie el valor de `memory` en `secondNumber`.
+    - [X] Añade un botón "M+" que almacene el valor de `result` en un hook "ref". Llama `memory` al ref.
+    - [X] Añade un botón "MR" que copie el valor de `memory` en `secondNumber`.
 
 3. Añade un nuevo componente.
     - [ ] Crea un nuevo hook de tipo state. Llamale `resultsHistory` y dale un valo rinicial de array vacío `[]`.

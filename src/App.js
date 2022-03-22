@@ -5,7 +5,7 @@ function App() {
   const [ firstNumber, setFirstNumber ] = useState(0);
   const [ secondNumber, setSecondNumber ] = useState(0);
   const [ result, setResult ] = useState(0);
-  {/*const [ history, setHistory ] = useRef([]);*/}
+  const memory = useRef(0);
 
   function changeFirstNumberHandler (event) {
     setFirstNumber(event.target.value);
@@ -39,13 +39,21 @@ function App() {
     setResult("")
     setFirstNumber("")
     setSecondNumber("")
-    console.log("Resultado eliminado");
+  }
+
+  function memoryChange() {
+    memory.current = result;
+  }
+  function memoryRecover() {
+    setFirstNumber(memory.current);
   }
 
   useEffect(
     ()=>{
       console.log("firstNumber state:", firstNumber);
       console.log("secondNumber state:", secondNumber);
+      console.log("Resultado :", result);
+      console.log("Memoria:", memory);
     }
   )
 
@@ -58,9 +66,11 @@ function App() {
       <button type="button" onClick={multiplyHandler}>x</button>
       <button type="button" onClick={divideHandler}>/</button>
       <input type="text" value={secondNumber} onChange={changeSecondNumberHandler}/>
-      <p>{result}</p>
+      <p>Total: {result}</p>
       <button type="button" onClick={clean}>Limpiar</button>
-      {/*<button type="button" onClick={historial}>M+</button>*/}
+      <button type="button" onClick={memoryChange}>M+</button>
+      <button type="button" onClick={memoryRecover}>MR</button>
+      {/*<History pHtmlElementsArray={item}></History>*/}
     </>
   );
 }
