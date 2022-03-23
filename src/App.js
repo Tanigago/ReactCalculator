@@ -1,11 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
 import './App.css';
+import History from './components/history/History.jsx'
 
 function App() {
-  const [ firstNumber, setFirstNumber ] = useState(0);
-  const [ secondNumber, setSecondNumber ] = useState(0);
-  const [ result, setResult ] = useState(0);
+  const [ firstNumber, setFirstNumber ] = useState(null);
+  const [ secondNumber, setSecondNumber ] = useState(null);
+  const [ result, setResult ] = useState(null);
   const memory = useRef(0);
+  const [ resultsHistory, setResultsHistory ] = useState([]);
 
   function changeFirstNumberHandler (event) {
     setFirstNumber(event.target.value);
@@ -57,6 +59,18 @@ function App() {
     }
   )
 
+  useEffect(
+    () => {
+      const resultValues = {
+        firstNumber,
+        secondNumber,
+        result
+      }
+      setResultsHistory([...resultsHistory, resultValues]);
+    },
+    [result]
+  )
+
   return (
     <>
       <h1>Calculadora</h1>
@@ -70,7 +84,7 @@ function App() {
       <button type="button" onClick={clean}>Limpiar</button>
       <button type="button" onClick={memoryChange}>M+</button>
       <button type="button" onClick={memoryRecover}>MR</button>
-      {/*<History pHtmlElementsArray={item}></History>*/}
+      <History results={resultsHistory}/>
     </>
   );
 }

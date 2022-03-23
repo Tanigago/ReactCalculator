@@ -25,10 +25,10 @@ npm start
     - [X] Añade un botón "MR" que copie el valor de `memory` en `secondNumber`.
 
 3. Añade un nuevo componente.
-    - [ ] Crea un nuevo hook de tipo state. Llamale `resultsHistory` y dale un valo rinicial de array vacío `[]`.
-    - [ ] Crea las carpetas `components/history` para el nuevo componente.
-    - [ ] En la nueva carpeta, crea el fichero `History.jsx`.
+    - [X] Crea un nuevo hook de tipo state. Llamale `resultsHistory` y dale un valo rinicial de array vacío `[]`.
+    - [X] Crea las carpetas `components/history` para el nuevo componente.
+    - [X] En la nueva carpeta, crea el fichero `History.jsx`.
     - [ ] Crea la estructura básica del componente. Ha de recibir un `prop` al que llamaremos `results`.
-    - [ ] Utiliza `results.map` para obtener un array de elementos `li`. Llama al array `liArray`.
-    - [ ] La salida del componente ha de ser un elemento `ol` que contenga los elementos de `liArray`.
-    - [ ] Importa el componente `History` en el componente principal e incorpólo en su salida, proporcionando como prop `results` el contenido de `resultsHistory`.
+    - [X] Utiliza `results.map` para obtener un array de elementos `li`. Llama al array `liArray`.
+    - [X] La salida del componente ha de ser un elemento `ol` que contenga los elementos de `liArray`.
+    - [X] Importa el componente `History` en el componente principal e incorpólo en su salida, proporcionando como prop `results` el contenido de `resultsHistory`.
