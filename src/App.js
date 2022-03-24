@@ -8,6 +8,7 @@ function App() {
   const [ result, setResult ] = useState(null);
   const memory = useRef(0);
   const [ resultsHistory, setResultsHistory ] = useState([]);
+  const firstRender = useRef(true);
 
   function changeFirstNumberHandler (event) {
     setFirstNumber(event.target.value);
@@ -61,12 +62,16 @@ function App() {
 
   useEffect(
     () => {
-      const resultValues = {
-        firstNumber,
-        secondNumber,
-        result
+      if (firstRender.current === true) {
+        firstRender.current = false;
+      } else {
+        const resultValues = {
+          firstNumber,
+          secondNumber,
+          result
+        }
+        setResultsHistory([...resultsHistory, resultValues]);
       }
-      setResultsHistory([...resultsHistory, resultValues]);
     },
     [result]
   )
